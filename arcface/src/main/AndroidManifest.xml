@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.arcsoft.arcface">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+        <activity
+            android:name="com.arcsoft.arcface.activity.DetectActivity"
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name="com.arcsoft.arcface.activity.ActiveActivity"
+            android:theme="@style/FullscreenTheme" />
+    </application>
+</manifest>

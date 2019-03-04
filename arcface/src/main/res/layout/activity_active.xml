@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4759D9"
+    tools:context=".activity.ActiveActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/active_face" />
+
+    <TextView
+        android:id="@+id/h2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/active_h2"
+        android:textColor="#AAB4F2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/h2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text="@string/active_h1"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/btn_active"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/active_button_bg"
+        android:text="@string/active_button_register"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+</RelativeLayout>
