@@ -65,8 +65,6 @@ public class ActiveActivity extends BaseActivity {
 
     private String action;
 
-    private Button mActiveButton;
-
     private float similarThreshold;
 
     private String srcFeatureData;
@@ -90,7 +88,7 @@ public class ActiveActivity extends BaseActivity {
             finish();
             return;
         }
-        mActiveButton = findViewById(R.id.btn_active);
+        Button mActiveButton = findViewById(R.id.btn_active);
         if (ACTION_EXTRACT_FEATURE.equals(action)) {
             mActiveButton.setText(R.string.active_button_register);
         } else if (ACTION_COMPARE_FACE.equals(action)) {
