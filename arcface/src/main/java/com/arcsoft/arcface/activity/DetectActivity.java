@@ -54,7 +54,6 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 /**
  * @author Nick
@@ -287,7 +286,7 @@ public class DetectActivity extends BaseActivity implements ViewTreeObserver.OnG
             }
 
             @Override
-            public void onSuccess(@NullableDecl final FaceSimilar similar) {
+            public void onSuccess(@NonNull final FaceSimilar similar) {
                 Log.i(TAG, String.format("人脸比对--成功，得分： %f", similar.getScore()));
                 if (similar.getScore() < similarThreshold) {
                     handler.sendEmptyMessage(SHOW_RETRY);
@@ -315,7 +314,7 @@ public class DetectActivity extends BaseActivity implements ViewTreeObserver.OnG
                 }
 
                 @Override
-                public void onSuccess(@NullableDecl final FaceFeature feature) {
+                public void onSuccess(@NonNull final FaceFeature feature) {
                     String featureData = Base64.encodeToString(feature.getFeatureData(), Base64.NO_PADDING);
                     Log.i(TAG, String.format("人脸特征提取成功: %s", featureData));
                     if (srcFeatureData == null) {
@@ -441,6 +440,7 @@ public class DetectActivity extends BaseActivity implements ViewTreeObserver.OnG
         if (savedInstanceState == null) {
             savedInstanceState = getIntent().getExtras();
         }
+        Verify.verifyNotNull(savedInstanceState, "参数传递有误.");
         action = savedInstanceState.getString(EXTRA_ACTION, ACTION_EXTRACT_FEATURE);
         Verify.verify(ACTION_EXTRACT_FEATURE.equals(action)
                 || ACTION_COMPARE_FACE.equals(action), "参数传递有误.");

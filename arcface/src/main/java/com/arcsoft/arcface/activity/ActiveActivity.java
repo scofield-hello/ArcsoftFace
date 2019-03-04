@@ -189,6 +189,7 @@ public class ActiveActivity extends BaseActivity {
         if (savedInstanceState == null) {
             savedInstanceState = getIntent().getExtras();
         }
+        Verify.verifyNotNull(savedInstanceState, "参数传递有误.");
         action = savedInstanceState.getString(EXTRA_ACTION, ACTION_EXTRACT_FEATURE);
         Verify.verify(ACTION_EXTRACT_FEATURE.equals(action)
                 || ACTION_COMPARE_FACE.equals(action), "参数传递有误.");

@@ -57,18 +57,18 @@ public class MainActivity extends AppCompatActivity {
                 int featureResultCode = data.getIntExtra("result_code", -1);
                 if (featureResultCode == 0) {
                     String featureData = data.getStringExtra("data");
-                    Log.i("MainActivity", "获取特征值成功：:" + featureData);
+                    Log.i("MainActivity", "获取特征值成功：" + featureData);
                 } else {
-                    Log.w("MainActivity", "获取特征值失败：:" + featureResultCode);
+                    Log.w("MainActivity", "获取特征值失败：" + featureResultCode);
                 }
                 break;
             case ACTION_REQUEST_COMPARE:
                 int compareResultCode = data.getIntExtra("result_code", -1);
                 if (compareResultCode == 0) {
                     float scoreData = data.getFloatExtra("data", 0.0F);
-                    Log.i("MainActivity", "人脸比对成功, 相似度：:" + scoreData);
+                    Log.i("MainActivity", "人脸比对成功, 相似度：" + scoreData);
                 } else {
-                    Log.w("MainActivity", "人脸比对失败：:" + compareResultCode);
+                    Log.w("MainActivity", "人脸比对失败：" + compareResultCode);
                 }
                 break;
             default:
